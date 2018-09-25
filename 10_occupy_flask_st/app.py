@@ -4,7 +4,7 @@
 #2018-09-24
 
 from flask import Flask, render_template
-import hw06
+from util import hw06
 
 app = Flask(__name__) # create instance of class Flask
 
