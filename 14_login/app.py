@@ -1,4 +1,4 @@
-#Michelle Tang
+#I've had Ahnaf, I'm Tangry: Michelle Tang, AHnaf Kazi
 #SoftDev1 pd6
 #K13: Echo Echo Echo . . .
 #2018-09-27
@@ -8,6 +8,7 @@ import os
 app = Flask (__name__) #create instance of class FLask
 app.secret_key = os.urandom(32)
 
+#hardcoded a username and password
 USER = "ultimate"
 PASS = "frisbee"
 
@@ -22,11 +23,15 @@ def intro():
     
 @app.route("/login", methods=["POST", "GET"])
 def login():
-  if request.form['username'] == USER and request.form['password'] == PASS:
+  if request.form['username'] == USER and request.form['password'] == PASS: #checks if username and password are correct
     session['username'] = request.form['username'] 
     return render_template("user.html", username = USER)
-  else:
-    return render_template('occupations.html')
+  elif request.form['username'] != USER:
+    return render_template('no.html',error = "username")
+  elif request.form['password'] !=P ASS:
+    return render_template('no.html',error = "password")
+  
+      
 
 @app.route("/logout", methods=["POST"])
 def logout():
