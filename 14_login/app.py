@@ -28,7 +28,7 @@ def login():
     return render_template("user.html", username = USER)
   elif request.form['username'] != USER:
     return render_template('no.html',error = "username")
-  elif request.form['password'] !=P ASS:
+  elif request.form['password'] !=PASS:
     return render_template('no.html',error = "password")
   
       
