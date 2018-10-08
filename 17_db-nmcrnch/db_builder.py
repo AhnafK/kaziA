@@ -8,6 +8,8 @@ import csv       #facilitates CSV I/O
 
 DB_FILE="discobandit.db"
 
+open(DB_FILE,'w').close() #Reset DB file
+
 db = sqlite3.connect(DB_FILE) #open if file exists, otherwise create
 c = db.cursor()               #facilitate db ops
 
