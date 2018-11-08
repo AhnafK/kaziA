@@ -28,7 +28,7 @@ with open('data/courses.csv', 'r') as file:
         command += "INSERT INTO grades "
         command += "VALUES(" + "'" + one + "'" + "," + two + "," + three + "); "
 
-print(command)
+#print(command)
 c.executescript(command)
 #========================================================================
 #INSERT YOUR POPULATE CODE IN THIS ZONE
