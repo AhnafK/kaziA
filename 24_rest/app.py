@@ -12,8 +12,8 @@ app = Flask(__name__) # create instance of class Flask
 @app.route("/")
 def home_page():
     f = urllib.request.urlopen("https://api.nasa.gov/planetary/apod?api_key=bw5ysm0VMzQSxOx5E762RuVWkbyPUPwt98pJesBV").read()
-    url = json.loads(f)
-    return render_template(index.html, image=url)
+    dic = json.loads(f)
+    return render_template("index.html", image=dic["url"])
 
 if __name__ == "__main__":
     app.debug = True
