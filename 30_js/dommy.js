@@ -56,7 +56,7 @@ addbutt.addEventListener('click',
 			 }
 			)
 
-//adds PISTACIOS to the list
+//adds fib to the list
 fibbutt.addEventListener('click',
 			 function(e){
 			     var kid = document.createElement('li');
