@@ -56,12 +56,16 @@ addbutt.addEventListener('click',
 			 }
 			)
 
+
+var listtoo = document.getElementById('fiblist');
+
 //adds fib to the list
 fibbutt.addEventListener('click',
 			 function(e){
 			     var kid = document.createElement('li');
 			     kid.innerHTML = fibonacci(fibcount);
 			     fibcount++;
-			     thelist.appendChild(kid);
+			     listtoo.appendChild(kid);
 			 }
 			)
+
